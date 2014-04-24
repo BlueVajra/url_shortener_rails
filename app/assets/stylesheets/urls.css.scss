@@ -1,0 +1,125 @@
+// Place all the styles related to the urls controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body{
+  background: image-url("groovy.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header{
+  max-width:800px;
+  margin:5em auto 0;
+  padding:0;
+}
+header div{
+//  float:left;
+}
+header div img{
+  margin:0;
+  padding:0;
+  vertical-align: top;
+  max-width:100% !important;
+  height:auto;
+  display:block;
+}
+
+header h1{
+  font-family: 'Mystery Quest', 'cursive';
+  font-size:6em;
+  padding:0;
+  margin:0;
+  margin-top:1em;
+  margin-right:.5em;
+  color: #ffffff;
+  opacity:.8;
+  text-align:center;
+  float:right;
+}
+
+
+section{
+  clear:both;
+  max-width:800px;
+  padding:1em;
+  margin:0 auto;
+//  background-color: #d97f81;
+  background-color: rgba(255,255,255,.5);
+  border:10px solid #d0433a;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.url_form{
+
+}
+
+.url_form form {
+  font-size:1.5em;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-right: 6.5em;
+
+}
+
+.url_form input[type="text"] {
+  font-size:1.1em;
+  width: 100%;
+  float: left;
+  border:5px solid #d0433a;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.url_form input[type="submit"] {
+  font-size:1em;
+  -webkit-appearance: text;
+  margin: 0;
+  border: 0;
+  color: whitesmoke;
+  background-color: #e29b49;
+  width: 6em;
+  position: absolute;
+  right: 0;
+  top:1px;
+//  top:2px;
+  border:5px solid #d0433a;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+section.stats table{
+  width:100%;
+  font-size: 1.5em;
+  border:3px solid darkslategrey;
+  background-color: rgba(255,255,255,.8);
+}
+section.stats table td{
+  padding:.2em .5em;
+}
+
+@media all and (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+}

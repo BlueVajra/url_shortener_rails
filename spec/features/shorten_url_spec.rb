@@ -10,7 +10,7 @@ feature 'URL shortening' do
     expect(page).to have_content 'Original URL'
     expect(page).to have_content 'http://livingsocial.com'
     expect(page).to have_content '"Shortened" URL'
-    expect(page).to have_content "http://www.example.com:80/#{id_of_created_url(current_path)}"
+    expect(page).to have_content "http://www.example.com/#{id_of_created_url(current_path)}"
 
     visit "/#{id_of_created_url(current_path)}"
 
@@ -18,7 +18,7 @@ feature 'URL shortening' do
   end
 
   scenario 'Reports an error when user tries to shorten a non-url' do
-    pending
+
     visit '/'
 
     fill_in 'url_to_shorten', with: 'not a url'

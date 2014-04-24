@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get 'urls/index'
+
+  get '/', to: 'urls#index'
+  post '/urls/new', to: 'urls#create'
+  get '/:id', to: 'urls#status'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
