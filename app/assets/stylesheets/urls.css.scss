@@ -108,11 +108,29 @@ section{
   border-radius: 5px;
 }
 
+
+.url_form #error_explanation{
+  color: darkred;
+}
+
+.url_form #error_explanation h2{
+  font-family: 'Mystery Quest', 'cursive';
+  text-align:center;
+  font-weight: 900;
+  font-size:2.5em;
+  padding-top:0;
+  margin-top:0;
+}
+
 section.stats table{
   width:100%;
   font-size: 1.5em;
-  border:3px solid darkslategrey;
+//  border:3px solid darkslategrey;
   background-color: rgba(255,255,255,.8);
+  border:5px solid #e29b49;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 section.stats table td{
   padding:.2em .5em;

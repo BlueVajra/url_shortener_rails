@@ -3,18 +3,21 @@ class UrlsController < ApplicationController
   end
 
   def create
-    url = Url.new
-    url.url = params[:url_to_shorten]
-    url.save
-    url.short_url = url.id
-    url.save
-    redirect_to "/#{url.id}?stats=true"
+    @url = Url.new
+    @url.url = params[:url_to_shorten]
+    if @url.save
+      redirect_to "/#{@url.id}?stats=true"
+    else
+      render :index
+    end
   end
 
-  def status
+  def show
     @url = Url.find(params[:id])
     if !params[:stats]
-      redirect_to @url = Url.find(params[:id]).url
+      @url.count += 1
+      @url.save
+      redirect_to @url.url
     end
   end
 end

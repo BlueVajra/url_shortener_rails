@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/', to: 'urls#index'
   post '/urls/new', to: 'urls#create'
-  get '/:id', to: 'urls#status'
+  get '/:id', to: 'urls#show'
 
 
 

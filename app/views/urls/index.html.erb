@@ -1,6 +1,18 @@
 <header><h1>Minify-Me</h1><div class="logo"><%= image_tag "Dr-Evil_sm.png" %></div></header>
 <section>
 <div class="url_form">
+  <% if @url.present? && @url.errors.any? %>
+    <div id="error_explanation">
+      <h2>This is not groovy, man!</h2>
+      <ul>
+        <% @url.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
     <form action="/urls/new" method="post">
       <input type="text" name="url_to_shorten" placeholder="http://"><input type="submit" value="Shorten">
     </form>
